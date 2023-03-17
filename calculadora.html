@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="script.js"></script>
+		<title>Calculadora</title>
+
+		<style>
+			.botao{
+				margin-left: 10px;
+			}
+
+			input, select{
+				margin-bottom: 20px;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		
+		<div class="container">
+			<div class="">
+				<h1>CALCULADORA</h1>
+			</div>
+
+			<hr />
+
+			<div class="row">
+				<div class="col-md-4">
+					<input id="valorUm" type="text" class="form-control" placeholder="Digite um número" />
+				</div>
+
+				<div class="col-md-4">
+					<select class="form-control" id="operacao">
+						<option value="">--Selecione uma operação</option>
+						<option value="1">Subtração (-)</option>
+						<option value="2">Adição (+)</option>
+						<option value="3">Multiplicação (x)</option>
+						<option value="4">Divisão (÷)</option>
+						<option value="5">Porcentagem (%)</option>
+					</select>
+				</div>
+
+				<div class="col-md-4">
+					<input id="valorDois" type="text" class="form-control" placeholder="Digite outro número"/>
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="row">
+				<div class="col-md-4"></div>
+
+				<div class="col-md-4"></div>
+
+				<div class="col-md-4">
+					<button onclick="limpar()" type="button" class="btn btn-lg btn-danger pull-right botao">Limpar</button>
+					<button onclick="calcular()" type="button" class="btn btn-lg btn-success pull-right">Calcular</button>
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="well">
+				<h3>Resultado: </h3> <input id="resultado" type="text" class="form-control" readonly/>
+			</div>
+		</div>
+	</body>
+</html>
